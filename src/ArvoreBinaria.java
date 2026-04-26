@@ -1,6 +1,5 @@
 /**
  * Implementação de Árvore Binária de Busca (BST)
- * Baseada na apresentação do Prof. Me. Audir da Costa Oliveira Filho
  * IFG - Câmpus Luziânia
  *
  * Estrutura do nó (TAD):
@@ -211,7 +210,7 @@ public class ArvoreBinaria {
 
         System.out.println("===========================================");
         System.out.println("  ÁRVORE BINÁRIA – IFG Câmpus Luziânia");
-        System.out.println("  Prof. Audir da Costa Oliveira Filho");
+        System.out.println("  Aluno : Valdeir cesario da silva");
         System.out.println("===========================================\n");
 
         // --- Construção da árvore do exercício ---
@@ -253,7 +252,7 @@ public class ArvoreBinaria {
         System.out.println();
 
         // --- Pesquisa ---
-        int[] buscas = {62, 99, 41, 7};
+        int[] buscas = {39, 50, 40, 89};
         System.out.println("--- Pesquisas ---");
         for (int v : buscas) {
             System.out.println("Pesquisar(" + v + ") → " +
