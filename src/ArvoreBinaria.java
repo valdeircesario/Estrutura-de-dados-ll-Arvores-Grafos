@@ -1,24 +1,14 @@
-/**
- * Implementação de Árvore Binária de Busca (BST)
- * IFG - Câmpus Luziânia
- *
- * Estrutura do nó (TAD):
- *  - valor     : chave do nó
- *  - sae       : ponteiro para sub-árvore esquerda (Sub-Árvore Esquerda)
- *  - sad       : ponteiro para sub-árvore direita  (Sub-Árvore Direita)
- */
+
 public class ArvoreBinaria {
 
-    // =========================================================
-    //  CLASSE INTERNA: Nó da Árvore
-    // =========================================================
+
     public static class No {
 
         private No sae;          // sub-árvore esquerda
         private No sad;          // sub-árvore direita
         private Integer valor;   // chave / dado do nó
 
-        // ---------- Construtor ----------
+
         public No(int valor) {
             this.valor = valor;
             this.sae   = null;
@@ -194,18 +184,7 @@ public class ArvoreBinaria {
     } // fim class No
 
 
-    // =========================================================
-    //  MAIN – Demonstração com a árvore do exercício (slide 42):
-    //
-    //              41
-    //            /    \
-    //          27      81
-    //         /  \    /  \
-    //        07  38  67  84
-    //       / \   \  /  /  \
-    //      02 11  33 62 82  92
-    //
-    // =========================================================
+
     public static void main(String[] args) {
 
         System.out.println("===========================================");
@@ -214,19 +193,19 @@ public class ArvoreBinaria {
         System.out.println("===========================================\n");
 
         // --- Construção da árvore do exercício ---
-        No raiz = new No(38);
-        raiz.insere(21);
-        raiz.insere(60);
-        raiz.insere(11);
+        No raiz = new No(52);
+        raiz.insere(41);
         raiz.insere(30);
+        raiz.insere(16);
+        raiz.insere(9);
+        raiz.insere(45);
+        raiz.insere(34);
+        raiz.insere(20);
         raiz.insere(62);
-        raiz.insere(89);
-        raiz.insere(5);
-        raiz.insere(19);
-        raiz.insere(39);
-        raiz.insere(50);
-        raiz.insere(90);
+        raiz.insere(57);
         raiz.insere(40);
+        raiz.insere(60);
+        raiz.insere(61);
 
         // --- Informações gerais ---
         System.out.println("Total de nós : " + raiz.contarNos());
@@ -252,7 +231,7 @@ public class ArvoreBinaria {
         System.out.println();
 
         // --- Pesquisa ---
-        int[] buscas = {39, 50, 40, 89};
+        int[] buscas = {16, 57, 60, 40};
         System.out.println("--- Pesquisas ---");
         for (int v : buscas) {
             System.out.println("Pesquisar(" + v + ") → " +
@@ -268,14 +247,12 @@ public class ArvoreBinaria {
 
         // --- Demonstração: árvore estritamente binária ---
         System.out.println("--- Árvore Estritamente Binária (nós com 0 ou 2 filhos) ---");
-        No estrita = new No(10);
+        No estrita = new No(16);
         estrita.insere(5);
-        estrita.insere(15);
-        estrita.insere(3);
-        estrita.insere(7);
-        // 10 tem dois filhos (5 e 15); 5 tem dois filhos (3 e 7); 15 é folha →
-        // 15 é folha mas 5 tem dois filhos → NÃO estritamente binária pois 15
-        // não tem filhos enquanto 5 tem → na verdade é estrita (15 é folha, ok)
+        estrita.insere(57);
+        estrita.insere(60);
+        estrita.insere(45);
+
         System.out.print("  Pré-ordem da árvore estrita: ");
         estrita.listarPreOrdem();
         System.out.println();
